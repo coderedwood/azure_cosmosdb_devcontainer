@@ -1,21 +1,18 @@
-###Azure CosmosDB DevContainer Project
+### Azure CosmosDB DevContainer Project
 
-##.Net DevContainer Project to create reasource group for Azure CosmosDB using the .Net 6 SDK
+## .Net DevContainer Project to create reasource group for Azure CosmosDB using the .Net 6 SDK
 
-#Login with Azure using 
+# Login with Azure using 
 az login OR az login --use-device-code
 
-Create resources in Azure
-Create a resource group for the resources needed for this exercise. Replace <myLocation> with a region near you.
-
-
-Copy
+## Create resources in Azure
+# Create a resource group for the resources needed for this exercise. Replace <myLocation> with a region near you.
 az group create --location <myLocation> --name <resourceGroupName>
-Create the Azure Cosmos DB account. Replace <myCosmosDBacct> with a unique name to identify your Azure Cosmos DB account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. This command takes a few minutes to complete.
 
+#Create the Azure Cosmos DB account. Replace <myCosmosDBacct> with a unique name to identify your Azure Cosmos DB account. The name can only contain lowercase letters, numbers, and the hyphen (-) character. It must be between 3-31 characters in length. This command takes a few minutes to complete.
 
-Copy
 az cosmosdb create --name <myCosmosDBacct> --resource-group <resourceGroupName>
+
 Record the documentEndpoint shown in the JSON response, it's used later in the exercise.
 
 Retrieve the primary key for the account by using the following command. Record the primaryMasterKey from the command results it will be used in the code.
@@ -26,7 +23,6 @@ az cosmosdb keys list --name <myCosmosDBacct> --resource-group <resourceGroupNam
 
 
 # Create a folder for the project and change in to the folder.
-
 
 mkdir az204-cosmos
 cd az204-cosmos
